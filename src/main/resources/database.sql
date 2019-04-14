@@ -15,7 +15,6 @@ CREATE TABLE `crontab` (
   `url` varchar(500) CHARACTER SET utf8 NOT NULL,
   `status` smallint(6) DEFAULT '1' COMMENT '0 启用 1停用',
   PRIMARY KEY (`job_id`),
-  UNIQUE KEY `unique_url` (`url`) USING BTREE,
   KEY `idx_status` (`status`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

@@ -2,7 +2,7 @@ package com.zkyne.jobmanager.common.exception;
 
 import com.zkyne.jobmanager.common.util.RequestUtil;
 import com.zkyne.jobmanager.common.util.ResultUtils;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Author: zkyne
  * @Date: 2018/6/22 11:00
  */
-@Slf4j
+@Log4j
 @ControllerAdvice
 @Component
 public class ExceptionHandle {

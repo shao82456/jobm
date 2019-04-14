@@ -1,6 +1,7 @@
 package com.zkyne.jobmanager.common.system;
 
 import com.zkyne.jobmanager.dto.ExcuteJob;
+import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.quartz.impl.JobDetailImpl;
@@ -9,7 +10,7 @@ import org.quartz.impl.triggers.CronTriggerImpl;
 
 import java.text.ParseException;
 
-@Slf4j
+@Log4j
 public class JobManager {
     private static SchedulerFactory sf;
 
@@ -27,7 +28,7 @@ public class JobManager {
         Scheduler sched = sf.getScheduler();
         JobDetailImpl job = new JobDetailImpl();
         job.setName(name);
-        log.info("正在添加Job：{}", name);
+        log.info("正在添加Job：{}"+name);
         job.setJobClass(ExcuteJob.class);
         JobDataMap jobDataMap = new JobDataMap();
         jobDataMap.put("url", url);
@@ -63,7 +64,7 @@ public class JobManager {
         } catch (SchedulerException e) {
             e.printStackTrace();
         }
-        log.info("runstate state={}", state);
+        log.info("runstate state={}"+state);
     }
 
 }

@@ -1,5 +1,6 @@
 package com.zkyne.jobmanager.aspect;
 
+import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
@@ -20,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Author: zkyne
  * @Date: 2018/6/22 11:11
  */
-@Slf4j
+@Log4j
 @Component
 @Scope
 @Aspect
@@ -36,13 +37,13 @@ public class LogAspect {
         if(requestAttributes != null){
             HttpServletRequest request = requestAttributes.getRequest();
             Signature signature = joinPoint.getSignature();
-            log.info("访问接口URL={},访问类_方法={},访问参数Arsg={}", request.getRequestURL(),
-                    signature.getDeclaringTypeName() + "." + signature.getName(),joinPoint.getArgs());
+            log.info("访问接口URL={},访问类_方法={},访问参数Arsg={}"+request.getRequestURL()+
+                    signature.getDeclaringTypeName() + "." + signature.getName()+joinPoint.getArgs());
         }
     }
 
     @AfterReturning(returning = "object",pointcut = "logAspect()")
     public void doAfterReturn(Object object) {
-        log.info("接口返回值={}",object.toString());
+        log.info("接口返回值={}"+object.toString());
     }
 }

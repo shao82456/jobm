@@ -4,7 +4,8 @@ import com.zkyne.jobmanager.po.Crontab;
 import com.zkyne.jobmanager.service.ICrontabService;
 import com.zkyne.jobmanager.common.system.JobManager;
 import com.zkyne.jobmanager.common.util.DataUtil;
-import lombok.extern.slf4j.Slf4j;
+
+import lombok.extern.log4j.Log4j;
 import org.quartz.SchedulerException;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
@@ -18,7 +19,7 @@ import java.util.List;
  * @author zkyne
  */
 @Component
-@Slf4j
+@Log4j
 public class StartJobListener{
 
 	@Resource
@@ -42,6 +43,7 @@ public class StartJobListener{
     	if(!DataUtil.isEmpty(crontabs)){
 			for(Crontab crontab:crontabs){
 				if(crontab.getStatus() != Crontab.DISABLED){
+					log.warn(crontab.getCronExp());
 					JobManager.startJob(crontab.getJobId(), crontab.getUrl(), crontab.getCronExp(),crontab.getDescript());
 				}
 			}

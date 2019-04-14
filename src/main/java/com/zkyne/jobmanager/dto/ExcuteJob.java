@@ -2,6 +2,7 @@ package com.zkyne.jobmanager.dto;
 
 import com.zkyne.jobmanager.common.util.DateUtil;
 import com.zkyne.jobmanager.common.util.HttpUtils;
+import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 
@@ -13,7 +14,7 @@ import java.util.Date;
  * @Author: zkyne
  * @Date: 2018/4/11 16:05
  */
-@Slf4j
+@Log4j
 public class ExcuteJob implements Job {
     public ExcuteJob() {
 
@@ -32,11 +33,11 @@ public class ExcuteJob implements Job {
             try {
                 httpResult = HttpUtils.doGet(urlString);
             } catch (Exception e) {
-                log.error("执行job: {},执行URL: {}, 发生异常error:{}", descript, urlString, e);
+//                log.error("执行job: {},执行URL: {}, 发生异常error:{}", descript, urlString, e);
             }
         } catch (SchedulerException e) {
-            log.error("获取job:{},执行URL: {},的当前状态发生异常error:{}", descript, urlString, e);
+//            log.error("获取job:{},执行URL: {},的当前状态发生异常error:{}", descript, urlString, e);
         }
-        log.info("执行job: {} ,发送的URL: {} ,执行时间: {},当前任务状态: {},任务执行结果: {}", descript, urlString, DateUtil.format(new Date(), DateUtil.F24_PATTERN), state, httpResult);
+//        log.info("执行job: {} ,发送的URL: {} ,执行时间: {},当前任务状态: {},任务执行结果: {}", descript, urlString, DateUtil.format(new Date(), DateUtil.F24_PATTERN), state, httpResult);
     }
 }

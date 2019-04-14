@@ -10,6 +10,7 @@ import com.zkyne.jobmanager.common.system.JobManager;
 import com.zkyne.jobmanager.common.util.KeyGenerator;
 import com.zkyne.jobmanager.common.util.Page;
 import com.zkyne.jobmanager.common.util.ResultUtils;
+import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.quartz.SchedulerException;
@@ -34,7 +35,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("job")
-@Slf4j
+@Log4j
 public class JobController {
     @Resource
     private ICrontabService crontabService;
@@ -71,7 +72,7 @@ public class JobController {
     @ResponseBody
     @LogHandle
     public Map<String, Object> checkUrl(@RequestParam("jobUrl") String jobUrl) {
-        log.info("(校验任务Url) ->参数jobUrl:{}", jobUrl);
+//        log.info("(校验任务Url) ->参数jobUrl:{}", jobUrl);
         if (StringUtils.isBlank(jobUrl)) {
             return ResultUtils.error("路径Url不能为空");
         }
@@ -88,7 +89,7 @@ public class JobController {
     @LogHandle
     public Map<String, Object> addCrontab(@RequestParam("jobUrl") String jobUrl, @RequestParam("cronExp") String cronExp,
                                           @RequestParam("status") Integer status, @RequestParam("descript") String descript) {
-        log.info("(新建任务)->参数jobUrl:{},cronExp:{},status:{},descript:{}", jobUrl, cronExp, status, descript);
+//        log.info("(新建任务)->参数jobUrl:{},cronExp:{},status:{},descript:{}", jobUrl, cronExp, status, descript);
         Map<String, Object> result = checkParams(jobUrl, cronExp, descript);
         if ((int) result.get(Constants.CODE) != CodeEnum.CODE_SUCCESS.getCode()) {
             return result;
@@ -112,12 +113,12 @@ public class JobController {
                 JobManager.startJob(crontab.getJobId(), crontab.getUrl(), crontab.getCronExp(), crontab.getDescript());
                 return ResultUtils.success();
             } catch (ParseException | SchedulerException e) {
-                log.error("(新建任务) -> jobId:{},执行失败异常e:{}", crontab.getJobId(), e);
+//                log.error("(新建任务) -> jobId:{},执行失败异常e:{}", crontab.getJobId(), e);
                 try {
                     JobManager.startJob(crontab.getJobId(), crontab.getUrl(), crontab.getCronExp(), crontab.getDescript());
                     return ResultUtils.success();
                 } catch (ParseException | SchedulerException e1) {
-                    log.error("(新建任务) -> jobId:{},继续执行失败异常e:{}", crontab.getJobId(), e);
+//                    log.error("(新建任务) -> jobId:{},继续执行失败异常e:{}", crontab.getJobId(), e);
                     return ResultUtils.error("新增成功,执行任务失败");
                 }
             }
@@ -130,7 +131,7 @@ public class JobController {
     @LogHandle
     public Map<String, Object> modifyCrontab(@RequestParam("jobId") String jobId, @RequestParam("jobUrl") String jobUrl,
                                              @RequestParam("cronExp") String cronExp, @RequestParam("descript") String descript) {
-        log.info("(更新任务) -> 参数jobId:{},jonUrl:{},cronExp:{},descript:{}", jobId, jobUrl, cronExp, descript);
+//        log.info("(更新任务) -> 参数jobId:{},jonUrl:{},cronExp:{},descript:{}", jobId, jobUrl, cronExp, descript);
         if (StringUtils.isBlank(jobId)) {
             return ResultUtils.error("参数异常");
         }
@@ -156,11 +157,11 @@ public class JobController {
                     JobManager.startJob(crontab.getJobId(), crontab.getUrl(), crontab.getCronExp(), crontab.getDescript());
                     return ResultUtils.success();
                 } catch (ParseException e) {
-                    log.error("(更新任务) -> jobId:{}任务更新成功,停止任务成功,重启任务失败异常e", jobId, e);
+//                    log.error("(更新任务) -> jobId:{}任务更新成功,停止任务成功,重启任务失败异常e",+jobId+e);
                     return ResultUtils.error("更新成功,重启任务失败");
                 }
             } catch (SchedulerException e) {
-                log.error("(更新任务) -> jobId:{}任务更新成功,停止任务失败异常e", jobId, e);
+//                log.error("(更新任务) -> jobId:{}任务更新成功,停止任务失败异常e", jobId, e);
                 return ResultUtils.error("更新成功,重启任务失败");
             }
         }
@@ -188,7 +189,7 @@ public class JobController {
     @ResponseBody
     @LogHandle
     public Map<String, Object> reverseCrontab(@RequestParam("jobId") String jobId, @RequestParam("isStop") Boolean isStop) {
-        log.info("(切换任务) -> 参数jobId:{},isStop:{}", jobId, isStop);
+//        log.info("(切换任务) -> 参数jobId:{},isStop:{}", jobId, isStop);
         if (StringUtils.isBlank(jobId)) {
             return ResultUtils.error("参数异常");
         }
@@ -208,12 +209,12 @@ public class JobController {
                         JobManager.stopJob(jobId);
                         return ResultUtils.success();
                     } catch (SchedulerException e) {
-                        log.error("(停止任务) -> 任务jobId:{},停止失败e:{}", jobId, e);
+//                        log.error("(停止任务) -> 任务jobId:{},停止失败e:{}", jobId, e);
                         try {
                             JobManager.stopJob(jobId);
                             return ResultUtils.success();
                         } catch (SchedulerException e1) {
-                            log.error("(停止任务) -> 任务jobId:{},继续停止失败e:{}", jobId, e);
+//                            log.error("(停止任务) -> 任务jobId:{},继续停止失败e:{}", jobId, e);
                             return ResultUtils.error("任务状态更新成功,执行停止失败");
                         }
                     }
@@ -230,12 +231,12 @@ public class JobController {
                         JobManager.startJob(jobId, crontab.getUrl(), crontab.getCronExp(), crontab.getDescript());
                         return ResultUtils.success();
                     } catch (ParseException | SchedulerException e) {
-                        log.error("(开启任务) -> 任务jobId:{},开启失败e:{}", jobId, e);
+//                        log.error("(开启任务) -> 任务jobId:{},开启失败e:{}", jobId, e);
                         try {
                             JobManager.startJob(jobId, crontab.getUrl(), crontab.getCronExp(), crontab.getDescript());
                             return ResultUtils.success();
                         } catch (ParseException | SchedulerException e1) {
-                            log.error("(开启任务) -> 任务jobId:{},继续开启失败e:{}", jobId, e);
+//                            log.error("(开启任务) -> 任务jobId:{},继续开启失败e:{}", jobId, e);
                             return ResultUtils.error("任务状态更新成功,执行开启失败");
                         }
                     }
@@ -251,7 +252,7 @@ public class JobController {
     @ResponseBody
     @LogHandle
     public Map<String, Object> deleteCrontab(@RequestParam("jobId") String jobId) {
-        log.info("(删除任务) -> 参数jobId:{}", jobId);
+//        log.info("(删除任务) -> 参数jobId:{}", jobId);
         if (StringUtils.isBlank(jobId)) {
             return ResultUtils.error("参数异常");
         }
@@ -267,12 +268,12 @@ public class JobController {
             JobManager.stopJob(jobId);
             return ResultUtils.success();
         } catch (SchedulerException e) {
-            log.error("(删除任务) -> jobId:{}任务删除成功,执行停止任务失败异常e{}", jobId, e);
+//            log.error("(删除任务) -> jobId:{}任务删除成功,执行停止任务失败异常e{}", jobId, e);
             try {
                 JobManager.stopJob(jobId);
                 return ResultUtils.success();
             } catch (SchedulerException e1) {
-                log.error("(删除任务) -> jobId:{}任务删除成功,继续执行停止任务失败异常e{}", jobId, e);
+//                log.error("(删除任务) -> jobId:{}任务删除成功,继续执行停止任务失败异常e{}", jobId, e);
                 return ResultUtils.error("任务删除成功,停止任务失败");
             }
         }

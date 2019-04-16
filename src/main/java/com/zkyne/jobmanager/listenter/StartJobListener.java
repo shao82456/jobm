@@ -43,8 +43,13 @@ public class StartJobListener{
     	if(!DataUtil.isEmpty(crontabs)){
 			for(Crontab crontab:crontabs){
 				if(crontab.getStatus() != Crontab.DISABLED){
-					log.warn(crontab.getCronExp());
-					JobManager.startJob(crontab.getJobId(), crontab.getUrl(), crontab.getCronExp(),crontab.getDescript());
+					log.warn(crontab.getDescript()+" on"+crontab.getCronExp()+" 未启用");
+					try{
+						JobManager.startJob(crontab.getJobId(), crontab.getUrl(), crontab.getCronExp(),crontab.getDescript());
+					}catch (Exception e){
+						log.warn(crontab.getDescript()+" 任务初始化启动失败...请检查...");
+						log.warn(e.getMessage());
+					}
 				}
 			}
 		}else{

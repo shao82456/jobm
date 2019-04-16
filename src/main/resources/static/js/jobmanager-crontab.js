@@ -79,6 +79,7 @@ var crontab = {
     },
 
     _initAddCrontab:function () {
+        $('#add_jobType').val('');
         $('#add_jobUrl').val('');
         $('#add_cronExp').val('');
         $('#add_descript').val('');
@@ -108,6 +109,7 @@ var crontab = {
             toastr.warn("请勿重复提交.");
             return;
         }
+        var jobType=$('#add_jobType').val().trim();
         var jobUrl = $('#add_jobUrl').val().trim();
         var cronExp = $('#add_cronExp').val().trim();
         var descript = $('#add_descript').val().trim();
@@ -123,6 +125,7 @@ var crontab = {
                 url:crontab.URL._addCrontab(),
                 type:'post',
                 data:{
+                    jobType:jobType,
                     jobUrl:jobUrl,
                     cronExp:cronExp,
                     status:status,

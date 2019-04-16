@@ -28,7 +28,7 @@ public class JobManager {
         Scheduler sched = sf.getScheduler();
         JobDetailImpl job = new JobDetailImpl();
         job.setName(name);
-        log.info("正在添加Job：{}"+name);
+        log.info("正在添加Job：{}"+descript);
         job.setJobClass(ExcuteJob.class);
         JobDataMap jobDataMap = new JobDataMap();
         jobDataMap.put("url", url);

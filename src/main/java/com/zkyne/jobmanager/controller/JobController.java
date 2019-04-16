@@ -11,7 +11,6 @@ import com.zkyne.jobmanager.common.util.KeyGenerator;
 import com.zkyne.jobmanager.common.util.Page;
 import com.zkyne.jobmanager.common.util.ResultUtils;
 import lombok.extern.log4j.Log4j;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.quartz.SchedulerException;
 import org.springframework.stereotype.Controller;
@@ -87,7 +86,7 @@ public class JobController {
     @RequestMapping(value = "/add", produces = "application/json;charset=utf-8")
     @ResponseBody
     @LogHandle
-    public Map<String, Object> addCrontab(@RequestParam("jobUrl") String jobUrl, @RequestParam("cronExp") String cronExp,
+    public Map<String, Object> addCrontab(@RequestParam("jobType") String jobType, @RequestParam("jobUrl") String jobUrl, @RequestParam("cronExp") String cronExp,
                                           @RequestParam("status") Integer status, @RequestParam("descript") String descript) {
 //        log.info("(新建任务)->参数jobUrl:{},cronExp:{},status:{},descript:{}", jobUrl, cronExp, status, descript);
         Map<String, Object> result = checkParams(jobUrl, cronExp, descript);
@@ -105,6 +104,8 @@ public class JobController {
         crontab.setStatus(status);
         crontab.setPerformdate(new Date());
         int save = crontabService.saveCrontab(crontab);
+
+        log.info(jobType);
         if (save != 1) {
             return ResultUtils.error("新增失败");
         }
@@ -158,6 +159,7 @@ public class JobController {
                     return ResultUtils.success();
                 } catch (ParseException e) {
 //                    log.error("(更新任务) -> jobId:{}任务更新成功,停止任务成功,重启任务失败异常e",+jobId+e);
+                    log.error(e.getMessage());
                     return ResultUtils.error("更新成功,重启任务失败");
                 }
             } catch (SchedulerException e) {

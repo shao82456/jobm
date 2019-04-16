@@ -1,6 +1,6 @@
-[ WARN] [2019-04-14 17:30:38] | 0 0 11 * * ?
-[ WARN] [2019-04-14 17:30:38] | sfjskl
-[ERROR] [2019-04-14 17:30:38] | 任务调度系统初始化异常.....{}
+[ WARN] [2019-04-15 11:08:43] | 0 0 11 * * ?
+[ WARN] [2019-04-15 11:08:43] | sfjskl
+[ERROR] [2019-04-15 11:08:43] | 任务调度系统初始化异常.....{}
 java.text.ParseException: Illegal characters for this position: 'SFJ'
 	at org.quartz.CronExpression.storeExpressionVals(CronExpression.java:588)
 	at org.quartz.CronExpression.buildExpression(CronExpression.java:487)
@@ -36,8 +36,8 @@ java.text.ParseException: Illegal characters for this position: 'SFJ'
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-[ WARN] [2019-04-14 17:30:59] | 0 0 11 * * ?
-[ERROR] [2019-04-14 17:30:59] | 任务调度系统初始化异常.....{}
+[ WARN] [2019-04-15 14:05:30] | 0 0 11 * * ?
+[ERROR] [2019-04-15 14:05:30] | 任务调度系统初始化异常.....{}
 org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
 	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:279)
 	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:251)
@@ -73,14 +73,14 @@ org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'DEFAULT.3f5da8b5
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-[ WARN] [2019-04-14 18:01:51] | 0 0 11 * * ?
-[ERROR] [2019-04-14 18:01:51] | 任务调度系统初始化异常.....{}
-org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
-	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:279)
-	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:251)
-	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:886)
-	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:249)
-	at com.zkyne.jobmanager.common.system.JobManager.startJob(JobManager.java:43)
+[ WARN] [2019-04-15 14:14:13] | 11 14  * * ?
+[ERROR] [2019-04-15 14:14:13] | 任务调度系统初始化异常.....{}
+java.text.ParseException: '?' can only be specfied for Day-of-Month or Day-of-Week.
+	at org.quartz.CronExpression.storeExpressionVals(CronExpression.java:607)
+	at org.quartz.CronExpression.buildExpression(CronExpression.java:487)
+	at org.quartz.CronExpression.<init>(CronExpression.java:276)
+	at org.quartz.impl.triggers.CronTriggerImpl.setCronExpression(CronTriggerImpl.java:347)
+	at com.zkyne.jobmanager.common.system.JobManager.startJob(JobManager.java:40)
 	at com.zkyne.jobmanager.listenter.StartJobListener.createSitemap(StartJobListener.java:47)
 	at com.zkyne.jobmanager.listenter.StartJobListener.registJob(StartJobListener.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -110,3 +110,916 @@ org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'DEFAULT.3f5da8b5
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+[ WARN] [2019-04-15 14:14:55] | 11 14  * * ?
+[ERROR] [2019-04-15 14:14:55] | 任务调度系统初始化异常.....{}
+java.text.ParseException: '?' can only be specfied for Day-of-Month or Day-of-Week.
+	at org.quartz.CronExpression.storeExpressionVals(CronExpression.java:607)
+	at org.quartz.CronExpression.buildExpression(CronExpression.java:487)
+	at org.quartz.CronExpression.<init>(CronExpression.java:276)
+	at org.quartz.impl.triggers.CronTriggerImpl.setCronExpression(CronTriggerImpl.java:347)
+	at com.zkyne.jobmanager.common.system.JobManager.startJob(JobManager.java:40)
+	at com.zkyne.jobmanager.listenter.StartJobListener.createSitemap(StartJobListener.java:47)
+	at com.zkyne.jobmanager.listenter.StartJobListener.registJob(StartJobListener.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:261)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:180)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:400)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:354)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:888)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.zkyne.jobmanager.JobManagerApplication.main(JobManagerApplication.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+[ WARN] [2019-04-15 14:15:30] | 11 14  * * ?
+[ERROR] [2019-04-15 14:15:30] | 任务调度系统初始化异常.....{}
+java.text.ParseException: '?' can only be specfied for Day-of-Month or Day-of-Week.
+	at org.quartz.CronExpression.storeExpressionVals(CronExpression.java:607)
+	at org.quartz.CronExpression.buildExpression(CronExpression.java:487)
+	at org.quartz.CronExpression.<init>(CronExpression.java:276)
+	at org.quartz.impl.triggers.CronTriggerImpl.setCronExpression(CronTriggerImpl.java:347)
+	at com.zkyne.jobmanager.common.system.JobManager.startJob(JobManager.java:40)
+	at com.zkyne.jobmanager.listenter.StartJobListener.createSitemap(StartJobListener.java:47)
+	at com.zkyne.jobmanager.listenter.StartJobListener.registJob(StartJobListener.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:261)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:180)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:400)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:354)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:888)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.zkyne.jobmanager.JobManagerApplication.main(JobManagerApplication.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+[ WARN] [2019-04-15 14:16:26] | 11 14  * * ?
+[ERROR] [2019-04-15 14:16:26] | 任务调度系统初始化异常.....{}
+java.text.ParseException: '?' can only be specfied for Day-of-Month or Day-of-Week.
+	at org.quartz.CronExpression.storeExpressionVals(CronExpression.java:607)
+	at org.quartz.CronExpression.buildExpression(CronExpression.java:487)
+	at org.quartz.CronExpression.<init>(CronExpression.java:276)
+	at org.quartz.impl.triggers.CronTriggerImpl.setCronExpression(CronTriggerImpl.java:347)
+	at com.zkyne.jobmanager.common.system.JobManager.startJob(JobManager.java:40)
+	at com.zkyne.jobmanager.listenter.StartJobListener.createSitemap(StartJobListener.java:47)
+	at com.zkyne.jobmanager.listenter.StartJobListener.registJob(StartJobListener.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:261)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:180)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:400)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:354)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:888)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.zkyne.jobmanager.JobManagerApplication.main(JobManagerApplication.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+[ WARN] [2019-04-15 14:16:39] | teston 11 14  * * ?未启用
+[ WARN] [2019-04-15 14:16:39] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:16:39] | pdjlkfson sfjskl未启用
+[ WARN] [2019-04-15 14:16:39] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:18:02] | test on11 14  * * ? 未启用
+[ WARN] [2019-04-15 14:18:02] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:18:02] | '?' can only be specfied for Day-of-Month or Day-of-Week.
+[ WARN] [2019-04-15 14:18:02] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:18:02] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:18:02] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:24:51] | test on11 14  * * ? 未启用
+[ WARN] [2019-04-15 14:24:51] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:24:51] | '?' can only be specfied for Day-of-Month or Day-of-Week.
+[ WARN] [2019-04-15 14:24:51] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:24:51] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:24:51] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:34:31] | test on0 34 14  * * * ? 未启用
+[ WARN] [2019-04-15 14:34:31] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:34:31] | '?' can only be specfied for Day-of-Month or Day-of-Week.
+[ WARN] [2019-04-15 14:34:31] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:34:31] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:34:31] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:43:19] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:43:19] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:43:19] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:43:19] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:43:19] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:43:19] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:43:51] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:43:51] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:43:51] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:43:51] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:43:51] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:43:51] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:45:27] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:45:27] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:45:27] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:45:27] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:45:27] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:45:27] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:45:46] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:45:46] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:45:46] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:45:46] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:45:46] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:45:46] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:45:58] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:45:58] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:45:58] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:45:58] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:45:58] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:45:58] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:46:01] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:46:01] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:46:01] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:46:01] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:46:01] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:46:01] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:47:12] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:47:12] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:47:12] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:47:12] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:47:12] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:47:12] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:52:53] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:52:53] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:52:53] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:52:53] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:52:53] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:52:53] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:53:19] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:53:19] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:53:19] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:53:19] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:53:19] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:53:19] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:53:34] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:53:34] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:53:34] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:53:34] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:53:34] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:53:34] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:54:04] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:54:04] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:54:04] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:54:04] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:54:04] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:54:04] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:56:03] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:56:03] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:56:03] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:56:03] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:56:03] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:56:03] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:56:34] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:56:34] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:56:34] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:56:34] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:56:34] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:56:34] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:58:47] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:58:47] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:58:47] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:58:47] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:58:47] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:58:47] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 14:59:27] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 14:59:27] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:59:27] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 14:59:27] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 14:59:27] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 14:59:27] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:08:53] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:08:53] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:08:53] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:08:53] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:08:53] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:08:53] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:09:41] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:09:41] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:09:41] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:09:41] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:09:41] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:09:41] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:10:10] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:10:10] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:10:10] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:10:10] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:10:10] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:10:10] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:10:12] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:10:12] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:10:12] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:10:12] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:10:12] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:10:12] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:11:08] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:11:08] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:11:08] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:11:08] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:11:08] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:11:08] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:11:19] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:11:19] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:11:19] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:11:19] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:11:19] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:11:19] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:12:22] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:12:22] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:12:22] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:12:22] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:12:22] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:12:22] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:12:58] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:12:58] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:12:58] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:12:58] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:12:58] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:12:58] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:14:14] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:14:14] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:14:14] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:14:14] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:14:14] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:14:14] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:14:51] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:14:51] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:14:51] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:14:51] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:14:51] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:14:51] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:15:05] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:15:05] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:15:05] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:15:05] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:15:05] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:15:05] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:15:46] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:15:46] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:15:46] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:15:46] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:15:46] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:15:46] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:16:32] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:16:32] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:16:32] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:16:32] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:16:32] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:16:32] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:16:54] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:16:54] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:16:54] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:16:54] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:16:54] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:16:54] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:16:58] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:16:58] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:16:58] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:16:58] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:16:58] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:16:58] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:21:56] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:21:56] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:21:56] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:21:56] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:21:56] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:21:56] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:22:12] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:22:12] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:22:12] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:22:12] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:22:12] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:22:12] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:22:31] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:22:31] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:22:31] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:22:31] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:22:31] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:22:31] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:23:16] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:23:16] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:16] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:23:16] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:23:16] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:16] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:23:22] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:23:22] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:22] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:23:22] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:23:22] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:22] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:23:25] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:23:25] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:25] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:23:25] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:23:25] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:25] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:23:36] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:23:36] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:36] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:23:36] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:23:36] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:36] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:23:44] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:23:44] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:44] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:23:44] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:23:44] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:23:44] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:24:10] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:24:10] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:24:10] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:24:10] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:24:10] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:24:10] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:29:26] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:29:26] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:29:26] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:29:26] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:29:26] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:29:26] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:30:20] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:30:20] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:30:20] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:30:20] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:30:20] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:30:20] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:30:48] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:30:48] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:30:48] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:30:48] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:30:48] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:30:48] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:31:11] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:31:11] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:31:11] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:31:11] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:31:11] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:31:11] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:31:46] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:31:46] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:31:46] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:31:46] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:31:46] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:31:46] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:44:51] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:44:51] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:44:51] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:44:51] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:44:51] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:44:51] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:47:30] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:47:30] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:47:30] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:47:30] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:47:30] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:47:30] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:48:59] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:48:59] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:48:59] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:48:59] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:48:59] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:48:59] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:49:11] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:49:11] | test 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:49:11] | Unable to store Job : 'DEFAULT.3f5da8b544ef44249e1c133b90af55af', because one already exists with this identification.
+[ WARN] [2019-04-15 15:49:11] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:49:11] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:49:11] | Illegal characters for this position: 'SFJ'
+[ WARN] [2019-04-15 15:49:36] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:49:36] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:49:36] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:49:36] | Illegal characters for this position: 'SFJ'
+[ERROR] [2019-04-15 15:50:41] | 服务器系统异常:{}
+org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'jobType' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:112)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ WARN] [2019-04-15 15:54:10] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:54:10] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:54:10] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:54:10] | Illegal characters for this position: 'SFJ'
+[ERROR] [2019-04-15 15:54:29] | 服务器系统异常:{}
+org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'jobType' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:112)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ WARN] [2019-04-15 15:56:47] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:56:47] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:56:47] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:56:47] | Illegal characters for this position: 'SFJ'
+[ERROR] [2019-04-15 15:57:05] | 服务器系统异常:{}
+org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'jobType' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:112)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ WARN] [2019-04-15 15:58:32] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 15:58:32] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 15:58:32] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 15:58:32] | Illegal characters for this position: 'SFJ'
+[ERROR] [2019-04-15 15:58:41] | 服务器系统异常:{}
+org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'jobType' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:112)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] [2019-04-15 16:00:11] | 服务器系统异常:{}
+org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'jobType' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:112)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ WARN] [2019-04-15 16:02:47] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 16:02:47] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 16:02:47] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 16:02:47] | Illegal characters for this position: 'SFJ'
+[ERROR] [2019-04-15 16:03:00] | 服务器系统异常:{}
+org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'jobType' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:112)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ WARN] [2019-04-15 16:05:45] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 16:05:45] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 16:05:45] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 16:05:45] | Illegal characters for this position: 'SFJ'
+[ERROR] [2019-04-15 16:06:26] | 服务器系统异常:{}
+org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'jobType' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:112)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ WARN] [2019-04-15 16:09:09] | test on0 37 14  * *  ? 未启用
+[ WARN] [2019-04-15 16:09:09] | pdjlkfs onsfjskl 未启用
+[ WARN] [2019-04-15 16:09:09] | pdjlkfs 任务初始化启动失败...请检查...
+[ WARN] [2019-04-15 16:09:09] | Illegal characters for this position: 'SFJ'
+[ERROR] [2019-04-15 16:09:35] | 服务器系统异常:{}
+org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'jobType' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:112)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)

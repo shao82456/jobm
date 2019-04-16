@@ -105,6 +105,11 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
+                    <label for="add_jobType">任务类型:</label>
+                    <input type="radio" class="radio-inline" name="add_jobType" value="command"/> Command
+                    <input type="radio" class="radio-inline" name="add_jobType" value="jar"/> Jar
+                </div>
+                <div class="form-group">
                     <label for="add_jobUrl">路径URL:</label>
                     <input type="text" id="add_jobUrl" name="add_jobUrl" class="form-control" value="">
                 </div>
